@@ -47,6 +47,56 @@ create table muskarac (
 
  alter table muskarac add foreign key(neprijateljica) references neprijateljica(sifra);
 
+#2
+DELIMITER $$
+$$
+cREATE PROCEDURE fpo_1.zadatak()
+begin
+	declare broj int default 0;
+while broj <56872
+	insert into zarucnica(sifra,stilfrizura,prstena,gustoca,modelnaocala,nausinca)
+	values (null,'freak','2',20,'boss','2');
+set broj=broj+1;
+END$$
+DELIMITER ;
+
+#1
+
+CREATE FUNCTION zadatak1(@BROJ) RETURNS VARCHAR(5)
+AS
+BEGIN
+    DECLARE @varijabla CHAR(5);
+    IF(@BROJ > 980 && BROJ < 5080)
+         @varijabla = TRUE;
+    IF(@BROJ < 980 || BROJ > 5080) - uvjet kada broj nevalja, odnosno manji je od 980 ili je veći od 5080
+        @varijabla = FALSE;
+
+  RETURN @varijabla;
+END
+
+#3
+CREATE TRIGGER TriggerSumTable
+ON dbo.SumTable
+INSTEAD OF INSERT
+AS
+BEGIN
+	DECLARE
+		@Fnum real,
+		@Snum real,
+		@Sum real
+	SELECT @Fnum= INSERTED.[First Number],
+		   @Snum= INSERTED.[Second Number]
+		   FROM INSERTED
+	SET @Sum= @Fnum+ @Snum
+	INSERT INTO dbo.SumTable(
+	[First Number], [Second Number], [Sum of Numbers])
+	VALUES(@Fnum, @Snum, @Sum)
+END
+
+#
+
+
+
 
 
 
