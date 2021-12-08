@@ -50,50 +50,45 @@ create table muskarac (
 #2
 DELIMITER $$
 $$
-cREATE PROCEDURE fpo_1.zadatak()
+CREATE PROCEDURE fpo_1.zadatak2()
 begin
-	declare broj int default 0;
-while broj <56872
-	insert into zarucnica(sifra,stilfrizura,prstena,gustoca,modelnaocala,nausinca)
-	values (null,'freak','2',20,'boss','2');
-set broj=broj+1;
-END$$
-DELIMITER ;
-
+	declare brojac INT(11) default 0;
+	
+	while brojac < 20 do
+		set brojac = brojac + 1;
+		
+		insert into zarucnica(sifra, stilfrizura, prstena, gustoca, modelnaocala, nausinca)
+		values (null, 'frik', 2, 18, 'gucci', zadatak1(brojac));
+		
+	end while;
+END
 #1
 
-CREATE FUNCTION zadatak1(@BROJ) RETURNS VARCHAR(5)
-AS
-BEGIN
-    DECLARE @varijabla CHAR(5);
-    IF(@BROJ > 980 && BROJ < 5080)
-         @varijabla = TRUE;
-    IF(@BROJ < 980 || BROJ > 5080) - uvjet kada broj nevalja, odnosno manji je od 980 ili je veći od 5080
-        @varijabla = FALSE;
-
-  RETURN @varijabla;
+CREATE FUNCTION fpo_1.zadatak1(broj int(11))
+RETURNS VARCHAR(5)
+begin
+	declare varijabla VARCHAR(8);
+	if broj > 980 and broj < 5080 then
+		varijabla = 'TRUE';
+	end if;
+	if broj < 980 or broj > 5080 then
+		varijabla = 'FALSE';
+	end if;
+return varijabla;
 END
 
 #3
-CREATE TRIGGER TriggerSumTable
-ON dbo.SumTable
-INSTEAD OF INSERT
-AS
-BEGIN
-	DECLARE
-		@Fnum real,
-		@Snum real,
-		@Sum real
-	SELECT @Fnum= INSERTED.[First Number],
-		   @Snum= INSERTED.[Second Number]
-		   FROM INSERTED
-	SET @Sum= @Fnum+ @Snum
-	INSERT INTO dbo.SumTable(
-	[First Number], [Second Number], [Sum of Numbers])
-	VALUES(@Fnum, @Snum, @Sum)
-END
-
-#
+CREATE DEFINER=`edunova`@`localhost` TRIGGER zadatak3
+AFTER INSERT
+ON zarucnica FOR EACH row
+begin
+	insert into punac(sifra, modelnaocala, treciputa, drugiputa, novcica, narukvica)
+		values (null, 'gucci','2021-12-08', '2021-12-08', 18, zadatak1(30));
+	
+	insert into punac(sifra, modelnaocala, treciputa, drugiputa, novcica, narukvica)
+		values (null, 'gucci','2021-12-08', '2021-12-08', 13, zadatak1(9));
+end
+# 4
 
 
 
