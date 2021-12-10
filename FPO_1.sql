@@ -54,7 +54,7 @@ CREATE PROCEDURE fpo_1.zadatak2()
 begin
 	declare brojac INT(11) default 0;
 	
-	while brojac < 20 do
+	while brojac < 56872 do
 		set brojac = brojac + 1;
 		
 		insert into zarucnica(sifra, stilfrizura, prstena, gustoca, modelnaocala, nausinca)
