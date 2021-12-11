@@ -64,15 +64,14 @@ begin
 END
 #1
 
-CREATE FUNCTION fpo_1.zadatak1(broj int(11))
-RETURNS VARCHAR(5)
+CCREATE DEFINER=`edunova`@`localhost` FUNCTION `fpo_1`.`zadatak1`(broj int(11)) RETURNS int(11)
 begin
-	declare varijabla VARCHAR(8);
-	if broj > 980 and broj < 5080 then
-		varijabla = 'TRUE';
+	declare varijabla int(11);
+	if broj >= 980 and broj <= 5098 then
+		set varijabla = broj;
 	end if;
-	if broj < 980 or broj > 5080 then
-		varijabla = 'FALSE';
+	if broj <= 980 or broj >= 5098 then
+		set varijabla = 0;
 	end if;
 return varijabla;
 END
