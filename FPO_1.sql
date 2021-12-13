@@ -64,7 +64,7 @@ begin
 END
 #1
 
-CCREATE DEFINER=`edunova`@`localhost` FUNCTION `fpo_1`.`zadatak1`(broj int(11)) RETURNS int(11)
+CREATE DEFINER =`edunova`@`localhost` FUNCTION `fpo_1`.`zadatak1`(broj int(11)) RETURNS int(11)
 begin
 	declare varijabla int(11);
 	if broj >= 980 and broj <= 5098 then
@@ -75,6 +75,8 @@ begin
 	end if;
 return varijabla;
 END
+
+
 
 #3
 CREATE DEFINER=`edunova`@`localhost` TRIGGER zadatak3
@@ -89,8 +91,42 @@ begin
 end
 # 4
 
+ CREATE DEFINER=`edunova`@`localhost` PROCEDURE `fpo_1`.`zadatak4`()
+begin	
+    declare _sifra int;
+    declare _kraj int default 0;
+    declare _suma int default 0;
+    declare _brojac int default 0;
+    declare zarucnica_kursor 
+   	CURSOR for select sifra from zarucnica order by sifra;
+    declare continue handler for not found set _kraj=1;
+
+    open zarucnica_kursor;
+    petlja: loop
+
+    fetch zarucnica_kursor into _sifra;
+
+    if _kraj=1 then leave petlja;
+    end if;
+
+    if mod(_sifra, 7)=0 then set _suma=_suma+_sifra;
+    end if;
+
+    end loop petlja;
+    close zarucnica_kursor;
 
 
+    sumapetlja: loop
+    if _brojac=_suma then leave sumapetlja;
+    end if;
+
+    insert into muskarac(sifra,maraka,hlace,prstena,nausinca,neprijateljica) values
+    (null,'20','kratke','18','5',1);
+
+    set _brojac=_brojac+1;
+
+    end loop sumapetlja;
+end
 
 
 
