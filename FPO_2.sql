@@ -88,3 +88,41 @@ insert into ostavljen(id,bojaociju,nausnica,gustoca,narukvica)
 
 
 end
+
+#4
+CREATE DEFINER=`edunova`@`localhost` PROCEDURE `fpo_2`.`zadatak4`()
+begin	
+    declare _id int;
+    declare _kraj int default 0;
+    declare _suma int default 0;
+    declare _brojac int default 0;
+    declare becar_kursor 
+   	CURSOR for select id from becar order by id;
+    declare continue handler for not found set _kraj=1;
+
+    open becar_kursor;
+    petlja: loop
+
+    fetch becar_kursor into _id;
+
+    if _kraj=1 then leave petlja;
+    end if;
+
+    if mod(_id, 8)=0 then set _suma=_suma+_id;
+    end if;
+
+    end loop petlja;
+    close becar_kursor;
+
+
+    sumapetlja: loop
+    if _brojac=_suma then leave sumapetlja;
+    end if;
+
+    insert into muskarac (id,eura,haljina,hlace,bojakose,narukvica,prijatelj) values
+    (null,'20','ljetna','crne','crna','11',1);
+
+    set _brojac=_brojac+1;
+
+    end loop sumapetlja;
+end
