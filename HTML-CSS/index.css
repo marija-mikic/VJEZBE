@@ -1,4 +1,51 @@
 
+.menu-hover-lines {
+    text-align: left;
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: 1px;
+    transition: all 0.35s ease;
+  }
+  
+  .menu-hover-lines li a {
+    padding: 0.90rem 0;
+    color: rgba(10, 10, 10, 0.5);
+    position: relative;
+    margin-left: 1rem;
+  }
+  
+  .menu-hover-lines li:first-child a {
+    margin-left: 40;
+  }
+  .masonry-css-item {
+    -display: block;
+    max-width: 75rem;
+    margin-right: auto;
+    margin-left: auto;
+    width: 43%;
+    float: right;
+    padding-right: 0.625rem;
+    padding-left: 0.625rem;
+    
+  }
+  
+    
+  .menu-hover-lines a:hover,
+  .menu-hover-lines li.active > a {
+    color: #0a0a0a;
+    transition: all 0.35s ease;
+  }
+  
+  .menu-hover-lines a:hover::before,
+  .menu-hover-lines .active a::before,
+  .menu-hover-lines a:hover::after,
+  .menu-hover-lines .active a::after {
+    width: 100%;
+  }
+  
+  
+
+
 .full-width-testimonial {
     background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.1)), url("https://scontent.fzag1-2.fna.fbcdn.net/v/t39.30808-6/242348676_183321923925087_5255662523251028486_n.jpg?_nc_cat=105&ccb=1-5&_nc_sid=730e14&_nc_eui2=AeGCvYX7C6TQpEwVJBQ75TVu1shTEkDLipLWyFMSQMuKksQj8hi80d09LzO0LTYc8Vc&_nc_ohc=i-ezTvXZI9QAX_fwMoe&_nc_ht=scontent.fzag1-2.fna&oh=00_AT8I_YORBhzuU-KOgkOgHQj87WORGrk2nOgl8MSgBhtpxA&oe=61BEF280");
     background-position: center center;
@@ -11,11 +58,7 @@
     stroke-miterlimit: 10;
   }
   
-  .full-width-testimonial-content,
-  .full-width-testimonial-icon {
-    text-align: center;
-  }
-  
+    
   .full-width-testimonial-section {
     padding-top: 2rem;
   }
@@ -48,15 +91,15 @@
   
   @media screen and (min-width: 75em) {
     .full-width-testimonial-section .full-width-testimonial-text {
-      padding-left: 300px;
-      padding-right: 300px;
+      padding-left: 180px;
+      padding-right: 180px;
     }
   }
   
   .full-width-testimonial-section .full-width-testimonial-source {
     font-size: 1.2em;
     font-weight: 600;
-    color: #ffffff;
+    color: #530d0d;
     text-transform: uppercase;
     letter-spacing: 1.5px;
     padding-bottom: 0;
@@ -88,5 +131,24 @@
   .full-width-testimonial-content {
     width: 100%;
   }
+
+  
+.fullscreen-image-slider .orbit-image {
+    width: 55%;
+    height: 90vh;
+  }
+  
+  .fullscreen-image-slider .orbit-caption {
+    bottom: 50%;
+    -webkit-transform: translateY(30%);
+        -ms-transform: translateY(30%);
+            transform: translateY(30%);
+    background: none;
+    text-align: center;
+    color: #fefefe;
+    font-weight: bold;
+  }
+  
+  
   
   
