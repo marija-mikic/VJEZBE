@@ -6,7 +6,7 @@
 <body>
 <div class="fordiv"> The output of for loop:<br />
 < ?php
-for $x=10; 
+for $x=0; 
 {
 echo $x."<br>";
 $x= $x + 10;
