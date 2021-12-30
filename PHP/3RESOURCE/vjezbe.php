@@ -94,7 +94,19 @@ var_dump(test(800));
 
 ?>
 
-
+<?php
+//5.program za stvaranje novog stringa gdje se if dodaje na početak danog niza. ako niz već počinje sa if vratite nisz nepromjenjen.
+function test($s)
+{
+    if (strlen($s)>2 && substr ($s,0,2)=="if")//subst =vraća dio niza ;strlen-broji duljinu niza
+    {
+        return $s;
+    }
+    return "if".$s;//stavi IF
+}
+echo test("if else")."\n";
+echo test("else")."\n";
+?>
 
 
 
