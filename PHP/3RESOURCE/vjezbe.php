@@ -1,5 +1,5 @@
-<!--Napravite jednostavan HTML obrazac i prihvatite korisničko ime i prikažite ime putem PHP echo izjave.
 <?php
+//Napravite jednostavan HTML obrazac i prihvatite korisničko ime i prikažite ime putem PHP echo izjave
 $var = 'PHP Tutorial';
 ?>
 !DOCTYPE html>
@@ -14,9 +14,8 @@ $var = 'PHP Tutorial';
   <p><a href="https://www.w3resource.com/php/php-home.php">Go to the <?php echo $var; ?></a>.</p>
 </body>
 </html>
---!
 
-<!--Napravite jednostavan HTML obrazac i prihvatite korisničko ime i prikažite ime putem PHP echo izjave.
+Napravite jednostavan HTML obrazac i prihvatite korisničko ime i prikažite ime putem PHP echo izjave.
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -40,3 +39,38 @@ echo "<h3> Dobar dan $name </h3>";
 </body>
 </html>
 
+<?php
+//1. NAPIŠITE PROGRAM ZA IZRAČUNAVANJE ZBOROJA DVAJU ZADANIH CJELOBROJNIH VRIJEDNOSTI. AKO SU DVIJE VRIJEDNOSTI ISTE ONDA VRAĆA TROSTRUKI NJIHOV ZBROJ           
+
+function test ($x,$y)
+{
+    return $x==$y ? // x je jednako y
+     ($x+$y)*3 //ako je jednako pomnoži sa 3
+     :$x+$y;//zbroji x i y
+}
+echo test(4,2)."\n";
+echo test(6,2)."\n";
+echo test(3,3)."\n";
+?>
+<?php
+//NAPIŠITE PROGRAM DA DOBIJETE APSOLUTNU RALIKU IZMEĐU n I 51. AKO JE n VEĆI OD 51 VRATITE TROSTRUKU APSOLUTNU RAZLIKU.
+
+function test($n) 
+{
+     $x = 51;
+
+     if ($n > $x)// ako je n veći od 51
+     {
+       return ($n - $x)*3;//onda množi sa tri
+     }
+   return $x - $n; //provjeri dali je broj veći od n
+}
+echo test(53)."\n";
+echo test(30)."\n";
+echo test(51)."\n"; 
+?>
+
+
+
+
+    

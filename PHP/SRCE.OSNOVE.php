@@ -40,6 +40,7 @@ $b=3;
 if ($a<$b)
 {
 	echo "a je veće od b.";
+
 }
 else 
 {
