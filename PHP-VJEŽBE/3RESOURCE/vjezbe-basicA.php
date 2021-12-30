@@ -134,7 +134,7 @@ echo test("IGK")."\n";
 ?>
 
 <?php
-//PROGRAM ZA STVARANJE NOVOG SRINGA KOJI SE SASTOJI OD 4 KOPIJE 2 PREDNJA ZNAKA DANOG NIZA. AKO JE ZADANA DULJINA MANJA OD 2 VRATITE IZVORNI NIZ.
+//8.PROGRAM ZA STVARANJE NOVOG SRINGA KOJI SE SASTOJI OD 4 KOPIJE 2 PREDNJA ZNAKA DANOG NIZA. AKO JE ZADANA DULJINA MANJA OD 2 VRATITE IZVORNI NIZ.
 
 function test ($str)
 {
@@ -147,6 +147,31 @@ function test ($str)
 echo test("Marija ")."\n";
 echo test("dakovo")."\n";
 echo test("G")."\n";
+?>
+<?php
+//9.PROGRAM ZA STVARANJE NOVOG NIZA S ZADNJIM ZNAKOM DADANIM NA PREDNJOJ I ZADNJOJ STRANI NIZA 
+
+function test ($str)
+{
+    $s=substr($str, strlen($str)-1);
+    return $s.$str.$s;
+}
+echo test("Marija")."\n";
+echo test("dakovo")."\n";
+echo test("G")."\n";
+?>
+
+<?php
+//10.PROGRAM ZA PROVJERU DALI JE DATI POZIVIVAN BROJ VIŠEKRATNIK 3 ILI 7
+
+function test ($n)
+{
+    return $n%3==0||$n%7==0;
+}
+var_dump(test(3));
+var_dump(test(15));
+var_dump(test(37));
+
 ?>
 
 
