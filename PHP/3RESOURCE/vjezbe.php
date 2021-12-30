@@ -53,7 +53,7 @@ echo test(6,2)."\n";
 echo test(3,3)."\n";
 ?>
 <?php
-//NAPIŠITE PROGRAM DA DOBIJETE APSOLUTNU RALIKU IZMEĐU n I 51. AKO JE n VEĆI OD 51 VRATITE TROSTRUKU APSOLUTNU RAZLIKU.
+//2.NAPIŠITE PROGRAM DA DOBIJETE APSOLUTNU RALIKU IZMEĐU n I 51. AKO JE n VEĆI OD 51 VRATITE TROSTRUKU APSOLUTNU RAZLIKU.
 
 function test($n) 
 {
@@ -69,6 +69,34 @@ echo test(53)."\n";
 echo test(30)."\n";
 echo test(51)."\n"; 
 ?>
+<?php
+//3.napišite program za provjeru dva zadana cijela broja i vratite na true ako je jedan od njih 30 ili ako je njihovzboj 30
+function test($x,$y) 
+{
+     return ($x==30)||($y==30)||($x+$y==30);
+}
+var_dump( test(30,0));//30+0=20-thrue var_dump se koristi za informaciju o varijabli
+var_dump( test(25,0));
+var_dump( test(20,0));
+?>
+
+<?php
+//PROVJERI ZADANI CIJELI BROJ I VRATI NA THRUE AKO JE UNUTAR 10 OD 100 ILI 200 
+function test ($x)
+{
+if (abs($x-100)<=10|| abs($x-200)<=10)//abs apsolutni broj
+return true;
+return false;
+}
+var_dump(test(5));
+var_dump(test(210));
+var_dump(test(800));
+
+?>
+
+
+
+
 
 
 
