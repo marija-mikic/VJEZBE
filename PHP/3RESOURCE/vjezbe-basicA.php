@@ -119,7 +119,7 @@ echo test("Marija",5)."\n";
 echo test("Marija",1)."\n";
 ?>
 <?php
-//PROGRAM ZA ZAMJENU PRVOG I ZADNJEG ZNAKA U NIZU I VRAĆANJE NOVOG STRINGA
+//7.PROGRAM ZA ZAMJENU PRVOG I ZADNJEG ZNAKA U NIZU I VRAĆANJE NOVOG STRINGA
 function test ($str)
 {
     return strlen($str)>1?
