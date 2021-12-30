@@ -75,7 +75,7 @@ function test($x,$y)
 {
      return ($x==30)||($y==30)||($x+$y==30);
 }
-var_dump( test(30,0));//30+0=20-thrue var_dump se koristi za informaciju o varijabli
+var_dump( test(30,0));//30+0=20-thrue = var_dump se koristi za informaciju o varijabli
 var_dump( test(25,0));
 var_dump( test(20,0));
 ?>
@@ -107,6 +107,33 @@ function test($s)
 echo test("if else")."\n";
 echo test("else")."\n";
 ?>
+
+<?php
+//6.PROGRAM ZA UKLANJANJE ZNAKA U ZADANOJ POZICIJI ZADANOG NIZA
+function test ($s,$n)
+{
+    return substr($s,0,$n).substr($s,$n+1,strlen($s)-$n);//
+}
+echo test("Marija",3)."\n";
+echo test("Marija",5)."\n";
+echo test("Marija",1)."\n";
+?>
+<?php
+//PROGRAM ZA ZAMJENU PRVOG I ZADNJEG ZNAKA U NIZU I VRAĆANJE NOVOG STRINGA
+function test ($str)
+{
+    return strlen($str)>1?
+    substr($str,strlen($str)-1).
+    substr($str,1,strlen($str)-2).
+    substr($str,0,1):
+    $str;
+}
+echo test("Marija")."\n";
+echo test("dakovo")."\n";
+echo test("IGK")."\n";
+?>
+
+
 
 
 
