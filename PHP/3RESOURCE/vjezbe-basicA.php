@@ -133,6 +133,24 @@ echo test("dakovo")."\n";
 echo test("IGK")."\n";
 ?>
 
+<?php
+//PROGRAM ZA STVARANJE NOVOG SRINGA KOJI SE SASTOJI OD 4 KOPIJE 2 PREDNJA ZNAKA DANOG NIZA. AKO JE ZADANA DULJINA MANJA OD 2 VRATITE IZVORNI NIZ.
+
+function test ($str)
+{
+    return strlen($str)<2?
+     $str:
+     substr($str,0,2).
+     substr($str,0,2).
+     substr($str,0,2);
+}
+echo test("Marija ")."\n";
+echo test("dakovo")."\n";
+echo test("G")."\n";
+?>
+
+
+
 
 
 
