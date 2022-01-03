@@ -6,18 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="index.css">
-
-</head>
+    <style>
+                table {
+                float:right;  
+                background-color:padding:100px;
+        }
+        .row {
+            float:right;
+            
+              }
+        </style>
+    </head>
 <body>
-<div class="container form">
-        <div class="row">
-            <form method="GET" class="mx-auto">
-                <input type="number" name="BROJ REDAKA">
-                <input type="number" name="BROJ STUPACA">
-                <button action="submit">KREIRAJ TABLICU</button>
-            </form>
-        </div>
-    </div>
+
+
 <?php 
 
 
@@ -66,6 +68,7 @@ function getSpiralArray($row, $column)
 function PrintArray($row, $column, $array)
 
 {
+
     echo '<table>';
     for ($i = 0; $i < $row; $i++) {
         echo '<tr>';
@@ -77,6 +80,7 @@ function PrintArray($row, $column, $array)
     echo '</table>';
 }
 
+ 
 $row =5;
 $column =5;
 
@@ -86,9 +90,25 @@ $arr = getSpiralArray($row,$column);
 echo '<pre>';
 PrintArray($row,$column, $arr);
 
+
 echo '</pre>';
+
 ?>
 
+<div class="container form">
+
+        <div class="row" >
+        <div style="padding:80px;">
+
+                <p>BROJ REDAKA </p>
+                <input type="number" name="BROJ REDAKA" ></br>
+                <p>BROJ STUPACA</p></br>
+                <input type="number" name="BROJ STUPACA"></br>
+                <button action="submit">KREIRAJ TABLICU</button></br>
+                </form>
+</div>
+        </div>
+    </div>
 
 
 </body>
