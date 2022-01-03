@@ -4,17 +4,32 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>ciklicka tablica</title>
     <link rel="stylesheet" href="index.css">
-    <style>
-                table {
+    <style>   
+    td{
+    border: 1px solid rgb(247, 239, 239);
+    text-align: center;
+    color:white;
+    height: 30px;
+    width: 30px;
+}     
+        table {
                 float:right;  
-                background-color:padding:100px;
+                background:padding:100px;
+                border:;
+        }
+        body{
+            background-color:grey;
+            
         }
         .row {
             float:right;
+            color:white;
+            border:
             
               }
+       
         </style>
     </head>
 <body>
@@ -100,10 +115,10 @@ echo '</pre>';
         <div class="row" >
         <div style="padding:80px;">
 
-                <p>BROJ REDAKA </p>
-                <input type="number" name="BROJ REDAKA" ></br>
-                <p>BROJ STUPACA</p></br>
-                <input type="number" name="BROJ STUPACA"></br>
+                <p>Broj redaka </p>
+                <input type="number" name="Broj redaka" ></br>
+                <p>Broj stupca</p></br>
+                <input type="number" name="Broj stupaca"></br>
                 <button action="submit">KREIRAJ TABLICU</button></br>
                 </form>
 </div>
