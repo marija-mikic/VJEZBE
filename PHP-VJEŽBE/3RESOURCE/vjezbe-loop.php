@@ -20,5 +20,14 @@
         echo"$x"."/n"
     }
     ?>
+    <?php
+//izradite skriptu pomoću petlje for za dodavanje svih cijelih brojeva između 0 i 30 i prikaz broja
+$sum=0;
+for($x=1;$x<=30;$x++)
+{
+    $sum +=$x;
+}
+echo"sum is $sum"."";
+?>
 </body>
 </html>
