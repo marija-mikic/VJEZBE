@@ -10,17 +10,21 @@
     <?php
     //napravite skriptu koja pokazuje 1-2-3-4-5-6-7-8-9-10 u jednom retku. neće biti crtice na početnoj i završnoj poziciji
 
-    for ($x=1;$x<10;$x++)
-    {
+    for ($x=1;$x<=10;$x++)
+{
         if ($x<10)
+    {
+    echo "$x-";
     }
-    echo "$x-"
     else
     {
-        echo"$x"."/n"
+        echo"$x"."";
     }
-    ?>
-    <?php
+    
+}
+
+echo "<br>";
+
 //izradite skriptu pomoću petlje for za dodavanje svih cijelih brojeva između 0 i 30 i prikaz broja
 $sum=0;
 for($x=1;$x<=30;$x++)
@@ -28,6 +32,24 @@ for($x=1;$x<=30;$x++)
     $sum +=$x;
 }
 echo"sum is $sum"."";
+
+echo "<br>";
+//izradite skriptu za izradu sljedećeg uzroka
+
+for($x=1;$x<=5;$x++)
+{
+    for($y=1;$y<=$x;$y++)
+{
+    echo "*";
+      if ($y<$x)
+{
+        echo " ";
+    }
+}
+    echo "\n";
+
+}
+
 ?>
 </body>
 </html>
