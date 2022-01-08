@@ -77,8 +77,22 @@ for($i=1;$i<=$n-1;$i++)
     $x*($i+1);
 }
 echo"fakrorijel od $n="."\nˇ"
+ echo "<br>";
 
+ //napišite program koji će brojati znakove r
 
+ $text="riba ribi grize rep";
+ $search_char="r";
+ $count=0;
+
+ for($x="0";$x<strlen($text)$x++)
+ {
+     if(substr($text,$x,1)==$search_char)
+     {
+         $count=$count+1;
+     }
+ }
+ echo $count."\n";
 ?>
 </body>
 </html>
