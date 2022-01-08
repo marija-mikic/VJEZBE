@@ -68,6 +68,15 @@ echo " * ";
 echo "<br>";
 }
 
+//napišite program za izračunavanje i ispist faktorijele broja koristeći for petlju.faktorijel je 6
+
+$n=6;
+$i=1;
+for($i=1;$i<=$n-1;$i++)
+{
+    $x*($i+1);
+}
+echo"fakrorijel od $n="."\nˇ"
 
 
 ?>
