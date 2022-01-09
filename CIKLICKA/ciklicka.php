@@ -86,27 +86,32 @@ function getSpiralArray($row, $column)
 function PrintArray($row, $column, $array)
 
 {
+    if(isset($_GET['column']))
+    $column=$_GET['broj redaka'];
+    if(isset($_GET['row']))
+    $column=$_GET['broj stupaca'];
+    echo '<div class="container mx-auto">';
 
     echo '<table>';
     for ($i = 0; $i < $row; $i++) {
         echo '<tr>';
-        for ($j = 0; $j < $column; $j++) {
+    for ($j = 0; $j < $column; $j++) {
             echo '<td>' . $array[$i][$j] . '</td>';
         }
         echo '</tr>';
     }
     echo '</table>';
-}
 
- 
+
+}
 $row =5;
 $column =5;
-
 $arr = getSpiralArray($row,$column);
 
+PrintArray($row,$column, $arr);
 
 echo '<pre>';
-PrintArray($row,$column, $arr);
+
 
 
 echo '</pre>';
@@ -131,6 +136,3 @@ echo '</pre>';
 
 </body>
 </html>
-
-
-
