@@ -14,6 +14,8 @@
             <li><a href="grid.php">Primjer korištenja grida</a></li>
             <li><a href="getparametar.php?tekst=Edunova&boja=azure">Rad s GET parametrima</a></li>
             <li><a href="getparametar.php?tekst=Osijek&boja=gray">Rad s GET parametrima #2</a></li>
+            <li><a href="radsformamaget.php">Rad s formama GET</a></li>
+            <li><a href="radsformamapost.php">Rad s formama POST</a></li>
           </ul>
         </li>
         <li>
@@ -29,6 +31,7 @@
             <li><a target="_blank" href="nizovi.php">Nizovi (polja) - Arrays</a></li>
             <li><a target="_blank" href="whilepetlja.php">While petlja</a></li>
             <li><a target="_blank" href="program2.php">2. program</a></li>
+            <li><a target="_blank" href="predefiniranevrijednosti.php">Predefinirane vrijednosti</a></li>
           </ul>
         </li>
         <li>
