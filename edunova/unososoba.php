@@ -39,10 +39,7 @@ if(isset($_POST['ime'])
             </form>
             <ol>
               <?php foreach($_SESSION['podaci'] as $p): ?>
-                <li><?php echo 
-                $p['ime'] . ' ' . 
-                $p['prezime'] 
-                ?></li>
+                <li><?php echo $p['ime'] . ' ' . $p['prezime'] ?></li>
               <?php endforeach; ?>
             </ol>
           </div>
